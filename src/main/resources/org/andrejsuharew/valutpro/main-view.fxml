@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.andrejsuharew.valutpro.CurrencyConverterController"
+          alignment="CENTER" hgap="10" vgap="10" style="-fx-padding: 20;">
+
+    <!-- Заголовок -->
+    <Label text="Конвертер валют" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <!-- Выбор исходной валюты -->
+    <Label text="Из валюты:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="fromCurrencyBox" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <!-- Выбор целевой валюты -->
+    <Label text="В валюту:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="toCurrencyBox" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <!-- Поле ввода суммы -->
+    <Label text="Сумма:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="amountField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <!-- Кнопка конвертации -->
+    <Button text="Конвертировать" fx:id="convertButton" onAction="#convertCurrency"
+            GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+    <!-- Результат -->
+    <Label fx:id="resultLabel" text="Результат" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2"
+           style="-fx-font-size: 14px; -fx-text-fill: #333333; -fx-font-weight: bold;"/>
+
+</GridPane>
